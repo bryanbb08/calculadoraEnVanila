@@ -13,7 +13,7 @@ body {
 }
 
 .calculadora {
-    background-color: azure;
+    background-color: rgb(7, 59, 59);
     color: #d32929;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -23,10 +23,15 @@ body {
     padding: 1.5rem;
     box-shadow: 10px 10px 10px #d32929 ;
     border-radius: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
 }
 
+
+
 .pantalla {
-    background-color: rgb(16, 18, 16);
+    background-color: rgba(16, 12, 7, 0.86);
     border-radius: 1rem;
     grid-column: 1 / 5;
     padding: 1.5rem;
@@ -34,22 +39,27 @@ body {
     margin-bottom: 0.7rem;
     text-align: right;
     font-weight: 700;
+    box-shadow: #d329ae64 2px 2px;
 }
 
 .btn {
-    background-color: slategray;
-    color: #d32929;
+    background-color: rgba(235, 240, 243, 0.731);
+    color: #950f95;
     cursor: pointer;
     border: 0;
     padding: 1.5rem 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: black solid 1px;
     border-radius: 5px;
+    font-weight: 900;
+    font-size: 16px;
+    box-shadow: #bb34bd98 2px 2px;
 }
 
 .btn:hover {
-    background-color: rgb(48, 114, 176);
+    background-color: rgb(176, 48, 174);
 }
 
 #cero {
@@ -62,5 +72,61 @@ body {
 }
 
 #igual:hover {
-    background-color: rgb(4, 27, 108);
+    background-color: rgb(108, 4, 96);
+}
+
+/* movil */
+@media (max-width: 768px) {
+    body {
+        background: linear-gradient(rgb(213, 210, 210),green, blue);
+    }
+    .calculadora {
+        background-color: rgb(7, 59, 59);
+        color: #8c29d3;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
+        width: 300px;
+        max-width: 100%;
+        padding: 1.5rem;
+        box-shadow: 10px 10px 10px #0856a344 ;
+        border-radius: 0.5rem;
+    }
+    body::before {
+        content: '';
+        background: linear-gradient(rgb(213, 210, 210),green, blue);
+        width: 200px;
+        height: 90%;
+        position: absolute;
+        animation: animate 3s  infinite;
+    }
+
+    @keyframes animate {
+        0% {
+            transform: rotate(00deg);
+        }
+        20% {
+            transform: rotate(50deg);
+        }
+        40% {
+            transform: rotate(100deg);
+        }
+        60% {
+            transform: rotate(120deg);
+        }
+        80% {
+            transform: rotate(250deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+/* tableta */
+@media (min-width: 768px) and 
+(max-width: 1023px) {
+    body {
+        background-color: #29d378;
+    }
 }

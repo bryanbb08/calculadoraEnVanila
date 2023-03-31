@@ -7,9 +7,11 @@
 
 body {
     min-height: 100vh;
-    background-color: blue;
+    background: linear-gradient(red, blue);
+
     display: grid;
     place-items: center;
+    
 }
 
 .calculadora {
@@ -28,8 +30,6 @@ body {
     border-radius: 20px;
 }
 
-
-
 .pantalla {
     background-color: rgba(16, 12, 7, 0.86);
     border-radius: 1rem;
@@ -44,7 +44,7 @@ body {
 
 .btn {
     background-color: rgba(235, 240, 243, 0.731);
-    color: #950f95;
+    color: #0f9521;
     cursor: pointer;
     border: 0;
     padding: 1.5rem 0.5rem;
@@ -124,9 +124,19 @@ body {
 }
 
 /* tableta */
+
 @media (min-width: 768px) and 
 (max-width: 1023px) {
     body {
-        background-color: #29d378;
+        background-color: #000000;
+        position: relative;
+        overflow: hidden;
+    }
+    .container span {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        box-shadow: 1px 1px 5px rgba(171, 32, 32, 0.86);
+        border-radius: 5px;
     }
 }

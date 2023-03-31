@@ -1,5 +1,5 @@
 const pantalla = document.querySelector(".pantalla");
-const botones = document.querySelectorAll(".btn")
+const botones = document.querySelectorAll(".btn");
 
 botones.forEach(boton => {
     boton.addEventListener("click", () => {
@@ -35,4 +35,30 @@ botones.forEach(boton => {
         }
 
     })
-})
+});
+
+const container = document.querySelector('.container');
+const colors = ['#8c29d3', 'blue', 'green', 'pink', '#d32929','red','#DE36SC'];
+
+const figures = () => {
+    for(let i = 0 ; i <= 25; i++){
+        let figure = document.createElement('span');
+        let select = Math.round(colors.length * Math.random()) 
+
+
+        figure.style.top = innerHeight * Math.random() + 'px';
+        figure.style.left = innerWidth * Math.random() + 'px';
+        figure.style.background = colors[select >= colors.length ? select - 1 : select]
+
+        container.appendChild(figure);
+        
+        setInterval(() => {
+            figure.style.top = innerHeight * Math.random() + 'px';
+        figure.style.left = innerWidth * Math.random() + 'px';
+        },5000)
+    }
+}
+
+figures()
+    
+    
